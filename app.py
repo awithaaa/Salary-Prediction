@@ -37,6 +37,7 @@ user_input = user_input_features()
 st.write("User Input Features: ")
 st.write(user_input)
 
-prediction = model.predict(user_input)
 
-st.write(f"Predicted Salary: $ {prediction[0]:,.2f}")
+if (st.button("Predict")):
+    prediction = model.predict(user_input)
+    st.write(f"Predicted Salary: $ {prediction[0]:,.2f}")
